@@ -1,0 +1,20 @@
+{
+  "name": "mysql-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "database.hostname": "desktop-mysql-1",
+    "database.port": "3306",
+    "database.user": "debezium_new",
+    "database.password": "debezium_new_password",
+    "database.server.id": "1",
+    "database.server.name": "ecommerce_db",
+    "database.include.list": "ecommerce_db",
+    "table.include.list": "ecommerce_db.customers,ecommerce_db.products1,ecommerce_db.orders,ecommerce_db.order_items",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "dbhistory.ecommerce_db",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+    "schema.history.internal.kafka.topic": "dbhistory",
+    "topic.prefix": "dbserver1"
+  }
+}
